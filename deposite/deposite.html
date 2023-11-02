@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposite</title>
+    <link rel="stylesheet" href="deposite.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="alert">Адрес скопирован!</div>
+        <div class="content">
+            <h1>Пополнить баланс</h1>
+        </div>
+        <div class="warning">
+            <h4>QR-код заказа создан. Теперь вы можете отсканировать его для оплаты.
+                Внимание: каждый QR-код можно оплатить только один раз, второй раз получить невозможно.</h4>
+        </div>
+        <div class="trc20">
+            <div class="trc20-img"><img height="200px" src="adress.jpg" alt=""></div>
+            <div class="trc20-text"><p id="text">TUd4PhJRFrDZPV3AiD8Wngkpud6ygUj3FE</p></div>
+            <div class="trc20-copy"><button id="button" class="btn">Копировать адрес</button></div>
+        </div>
+    </div>
+ <script>
+    const btn = document.querySelector('#button');
+    const alert = document.querySelector('.alert')
+    
+
+    button.addEventListener('click', () => {
+        navigator.clipboard.writeText("TUd4PhJRFrDZPV3AiD8Wngkpud6ygUj3FE")
+        alert.classList.add('active')
+        setTimeout(() => alert.classList.remove('active'), 2000 )
+    })
+</script> 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./profile/css/profile.css">
+    <link rel="stylesheet" href="./profile/css/media.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="header-none">.</div>
+            <div class="header-title"><h3>Профиль</h3></div>
+            <div class="header-img"><img height="25px" src="./img/browser.png" alt=""></div>
+        </div>
+
+        <div class="header-backround">
+            <div class="blog">
+                <div class="person-row">
+                    <div class="person-ava"><img height="66px" src="./img/ava.png" alt=""></div>
+                <div class="person-user">
+                    <p id="userMenu">..</p>
+                    <img height="40px" src="./profile/img/profile.png" alt="">
+                </div>
+                <div class="person-start"><img height="20px" src="./profile/img/restart.png" alt=""></div>
+                </div>
+                <div class="person-active">
+                    <h3>Мои общие активы</h3>
+                    <p>10</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="person-go"><img height="83px" src="./profile/img/go.png" alt=""></div>
+
+       <div class="person-links">
+        <div class="person-links-img">
+            <img class="img-1" height="700px" src="./profile/img/1.png" alt="">
+            <img class="img-2" height="250px" src="./profile/img/2.png" alt="">
+        </div>
+       </div>
+ 
+
+        <footer class="footer">
+            <div class="footer-nav">
+                <div class="home footer-link"><a href="./home.html">
+                    <div class="footer-img"><img height="23px" src="./IMG/footer-icons/1.png" alt=""></div>
+                    <div class="footer-text">Главная</div>
+                </a></div>
+                <div class="record  footer-link"><a href="#">
+                    <div class="footer-img"><img height="23px" src="./IMG/footer-icons/2.png" alt=""></div>
+                    <div class="footer-text">Запись</div>
+                </a></div>
+                <div class="logo  footer-link"><img height="70px" src="./IMG/footer sra logo.png" alt=""></div>
+                <div class="provision"><a href="#">
+                    <div class="footer-img"><img height="23px" src="./IMG/footer-icons/3.png" alt=""></div>
+                    <div class="footer-text">Оказание <br> услуг</div>
+                </a></div>
+                <div class="profile  footer-link"><a href="#!">
+                    <div class="footer-img"><img height="23px" src="./IMG/footer-icons/4.png" alt=""></div>
+                    <div class="footer-text">Профиль</div>
+                </a></div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        var userNick = urlParams.get("nick");
+
+        if (userNick) {
+            // Сохраняем ник в локальном хранилище
+            localStorage.setItem("userNick", userNick);
+        }
+        // Попытаемся получить ник из локального хранилища
+        var storedNick = localStorage.getItem("userNick");
+
+        if (storedNick) {
+            document.getElementById("userMenu").innerHTML = decodeURIComponent(storedNick);
+        }
+        
+    </script>
+</body>
+</html>

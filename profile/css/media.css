@@ -1,0 +1,17 @@
+@media (max-width:700px){
+    .person-start {
+        transform: translateX(-100px);
+    }
+
+    .person-go img {
+        height: 60px;
+    }
+
+    .img-1  {
+        height: 560px;
+    }
+
+    .img-2 {
+        height: 200px;
+    }
+}

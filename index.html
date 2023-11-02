@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <link rel="stylesheet" href="login/login.css">
+</head>
+<body>
+    <!-- <div class="fon"></div> -->
+    <div class="wrapper">
+        <div class="header">
+            <div class="link">
+                <img height="23px height30px" src="./login/img/browser.png" alt="">
+                <img height="23px" src="./login/img/3.png" alt="">
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-logo"><img height="90px" src="./login/img/footer sra logo.png" alt=""></div>
+        </div>
+        <div class="content-title"> <h2>Регистрация </h2></div>
+       
+
+
+        <form id="registrationForm">
+            <div class="form">
+                <div class="form-title"><p><span>* </span>Аккаунт</p></div>
+                <div class="form-input"><input id="nickInput" type="text" placeholder="Пожалуйста, введите 6-12 букв или цифр" required></div>
+            </div>
+            <div class="form">
+                <div class="form-title"><p><span>* </span>Логин пароль</p></div>
+                <div class="form-input"><input id="passwordInput" type="text" placeholder="Введите 6-12 букв или цифр" required></div>
+            </div>
+            <div class="form">
+                <div class="form-title"><p><span>* </span>Подвердите пароль</p></div>
+                <div class="form-input"><input id="confirmPasswordInput" type="text" placeholder="Пожалуйста, введите 6-12 букв или цифр" required></div>
+            </div>
+            <div class="form">
+                <div class="form-title"><p><span>* </span>Телефонный номер</p></div>
+                <div class="form-input-number">
+                    <div class="form-number"><img height="22px" src="./login/img/kg.png" alt=""> <p>+996</p></div>
+                    <input id="phoneNumberInput" class="form-input-kg" type="text" placeholder="Пожалуйста, введите ваш номер" required>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-title"><p><span>* </span>Пароль для вывода</p></div>
+                <div class="form-input"><input id="withdrawalPasswordInput" name="text" type="text" placeholder="Установите 6-значний пароль для вывода средств" required></div>
+            </div>
+        </form>
+
+        <div class="login">
+            <div id="registerBtn" class="btn"><a href="./home.html">Регистрация</a></div>
+        </div>
+        <div class="signin">
+            <h4>У вас уже есть аккаунт? <a href="#!">Войти здесь</a></h4>
+        </div>
+    </div>
+ </div>
+
+ <script>
+        document.getElementById("registerBtn").addEventListener("click", function(event) {
+            event.preventDefault();
+            var enteredNick = document.getElementById("nickInput").value;
+            var profileLink = "profile.html?nick=" + encodeURIComponent(enteredNick);
+            var profileLinkProfile = "home.html?nick=" + encodeURIComponent(enteredNick);
+
+            // Перенаправление на страницу профиля
+            window.location.href = profileLink;
+            window.location.href = profileLinkProfile;
+        });
+        <!-- Ваш HTML-код остается неизменным -->
+
+
+ </script>
+ </body>
+</html>

@@ -1,0 +1,163 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.fon {
+    height: 40vh;
+    width:497px ;
+    background-image: url('./img/fon-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 100px;
+    left: 200px;
+   
+}
+
+.wrapper {
+    max-width: 497px;
+    margin: 0 auto;
+    background-color: #f8f9fb;
+
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    max-width: 497px;
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fb;
+}
+
+.link img {
+    margin-left: 6px;
+}
+
+.content {
+    text-align: center;
+    padding-top: 20px;
+    background-color: #f8f9fb;
+}
+
+.content-title {
+    background-color: #f8f9fb;
+    font-size: 17px;
+    padding: 20px
+}
+
+.content-title h2 {
+    font-weight: 300;
+}
+
+.form {
+    background-color: #f8f9fb;
+    padding-bottom: 10px;
+}
+
+.form-input input {
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+.form-input input::placeholder{
+    font-size: 16px;
+    color: #b3b3b3;
+    padding-left: 20px;
+}
+
+.form-input {
+    display: flex;
+    justify-content: center;
+}
+.form-input-kg {
+    width: 66%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+}
+
+.form-input-number input::placeholder{
+    font-size: 16px;
+    color: #b3b3b3;
+    padding-left: 10px;
+}
+
+ input {
+    color: red;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.form-title {
+    font-size:17px;
+    padding: 10px;
+}
+
+.form-title p span {
+    color: red;
+}
+
+.form-input-number {
+    display: flex;
+    justify-content: center;
+    gap: 19px;
+}
+
+.form-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100px;
+    height: 44px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.login {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+}
+
+.btn {
+    background-color: #d2d2d2;
+    /* width: 200px;
+    height: 35px; */
+    padding: 7px 50px;
+    border-radius: 20px;
+    transition: 500ms;
+}
+
+.btn:hover {
+    box-shadow: 1px 3px 4px rgb(133, 133, 133);
+    
+}
+
+.signin {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.signin h4 {
+    font-weight: 300;
+}
